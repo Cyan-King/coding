@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!--<!DOCTYPE person SYSTEM "http://www.wong.org/1.dtd" >-->
+        <!--引用内部部dtd-->
+        <!DOCTYPE person [
+                <!ELEMENT person (name, age)>
+                <!ELEMENT name (#PCDATA)>
+                <!ELEMENT age (#PCDATA)>
+                ]>
+<person>
+<name>张三</name>
+<age>2020</age>
+</person>

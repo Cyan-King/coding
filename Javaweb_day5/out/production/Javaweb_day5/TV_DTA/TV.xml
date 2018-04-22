@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TVSCHEDULE SYSTEM "TV.dtd" >
+<TVSCHEDULE NAME="TV">
+    <CHANNEL CHAN="china">
+        <BANNER>banner</BANNER>
+
+        <DAY>
+            <DATE>2018-4-19</DATE>
+            <HOLIDAY>xxxx</HOLIDAY>
+        </DAY>
+
+        <DAY>
+            <DATE>2018-4-17</DATE>
+            <PROGRAMSLOT VTR="vtr">
+                <TIME>time</TIME>
+                <TITLE>title</TITLE>
+                <DESCRIPTION>des</DESCRIPTION>
+            </PROGRAMSLOT>
+        </DAY>
+
+    </CHANNEL>
+</TVSCHEDULE>
