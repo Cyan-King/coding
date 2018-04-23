@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wei.org.com" xsi:schemaLocation="http://www.wei.org.com 1.xsd">--><person><p1><name>国平</name><age>21</age></p1><p1><name>园平</name><age>21</age><sex>男</sex></p1></person>

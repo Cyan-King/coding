@@ -23,9 +23,9 @@ public class TestDom4j {
         Document document = saxReader.read("src/person.xml");
         //得到根节点
         Element rootElement = document.getRootElement();
-        //的到p1的节点
-        List<Element> p1 = rootElement.elements("p1");
-        Element element = p1.get(1);
+        //的到p1的节点，我们使用了elements()方法
+        List<Element> list = rootElement.elements("p1");
+        Element element = list.get(1);
         //得到p1的age标签
         Element age = element.element("age");
         String text = age.getText();
