@@ -11,8 +11,11 @@ import java.util.List;
 
 public class StuSerice {
 
+    private static Student student;
+
     //添加学生信息
     public static void addStu(Student student){
+        StuSerice.student = student;
 
         //获取docuement
         Document docuement = Dom4jUtils.getDocuement("src/Student.xml");
@@ -45,8 +48,11 @@ public class StuSerice {
             String idv = node.getText();
             //判断id的值和传递的id值是否相同,进行下列代码
             if (idv.equals(id)){
+                //得到id的父节点stu
                 Element stu = node.getParent();
+                //使用stu的父节点来删除stu节点
                 Element parent = stu.getParent();
+                //使用父节点删除stu节点
                 parent.remove(stu);
             }
         }
@@ -55,7 +61,7 @@ public class StuSerice {
     }
 
     //获取id执行查询操作
-    public static void MolStu(String id){
+    public static void IntStu(String id){
         Document docuement = Dom4jUtils.getDocuement("src/Student.xml");
         //获取所有的id值
         List<Node> list = docuement.selectNodes("//id");
@@ -76,5 +82,31 @@ public class StuSerice {
             }
         }
 
+    }
+
+    public static void MolStu(String id, Student student){
+        //获取document
+        Document docuement = Dom4jUtils.getDocuement("src/Student.xml");
+        //获取id的节点
+        List<Node> list = docuement.selectNodes("//id");
+        //遍历id节点
+        for (Node node:list) {
+            //得到id的值
+            String idv = node.getText();
+            if (idv.equals(id)){
+                //获取stu节点
+                Element stu = node.getParent();
+                //获取id， name， age标签
+                Element id1 = stu.element("id");
+                Element name1 = stu.element("name");
+                Element age1 = stu.element("age");
+                //使用setText()方法进修修改
+                id1.setText(student.getId());
+                name1.setText(student.getName());
+                age1.setText(student.getAge());
+            }
+        }
+        //执行回写操作
+        Dom4jUtils.xmlWriters("src/Student.xml", docuement);
     }
 }
