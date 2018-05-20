@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+           version="2.5">
+
+    <servlet>
+        <servlet-name>AServlet</servlet-name>
+        <servlet-class>com.wei.servlet.AServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OneServlet</servlet-name>
+        <servlet-class>com.wei.servlet.forward.OneServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TwoServlet</servlet-name>
+        <servlet-class>com.wei.servlet.forward.TwoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IncludeOneServlet</servlet-name>
+        <servlet-class>com.wei.servlet.include.IncludeOneServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IncludeTwoServlet</servlet-name>
+        <servlet-class>com.wei.servlet.include.IncludeTwoServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>AServlet</servlet-name>
+        <url-pattern>/AServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OneServlet</servlet-name>
+        <url-pattern>/OneServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TwoServlet</servlet-name>
+        <url-pattern>/TwoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IncludeOneServlet</servlet-name>
+        <url-pattern>/IncludeOneServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IncludeTwoServlet</servlet-name>
+        <url-pattern>/IncludeTwoServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
