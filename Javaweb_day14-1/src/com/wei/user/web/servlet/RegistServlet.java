@@ -28,7 +28,7 @@ public class RegistServlet extends HttpServlet {
         User form = CommonUtils.toBean(request.getParameterMap(), User.class);
 
         /**
-         * 添加表达校验我们使用一map集合存储错误信息
+         * 添加表达校验我们使用map集合存储错误信息
          */
 
         Map<String, String> errors = new HashMap<String, String>();
@@ -64,6 +64,7 @@ public class RegistServlet extends HttpServlet {
             errors.put("verifyCode", "验证码输入错误");
         }
 
+        //判断是否有错，如果errors不为空的话
         if (errors != null && errors.size() > 0){
             request.setAttribute("errors", errors);
             request.setAttribute("user", form);
@@ -96,6 +97,8 @@ public class RegistServlet extends HttpServlet {
         try {
             //这个就是登陆成功
             userService.regist(form);
+            request.getSession().setAttribute("sessionUser2", form);
+
             response.getWriter().print("<h1>登录成功</h1><a href='" + request.getContextPath() + "/user/login.jsp" + "'>点击这里登录</a><br/>");
         } catch (UserException e) {
             //获取异常信息

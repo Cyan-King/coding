@@ -27,6 +27,8 @@
 <form action="<c:url value="/RegistServlet" />" method="post">
     用户名：<input type="text" name="username" value="${user.username }" />${errors.username }<br/>
     密&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" value="${user.password }" />${errors.password }<br/>
+    性&nbsp;&nbsp;&nbsp;别：<input type="text" name="sex" value="${user.sex }" />${errors.password }<br/>
+    爱&nbsp;&nbsp;&nbsp;好：<input type="text" name="love" value="${user.love }" />${errors.password }<br/>
     验证码：<input type="text" name="verifyCode" value="${user.verifyCode }" size="3">
             <img id="verifyCode" src="<c:url value="/VerifyCodeServlet" />">
     <a href="javascript:_change()">看不清，换一张</a>${errors.verifyCode }<br/>

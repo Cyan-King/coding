@@ -49,11 +49,11 @@ public class UserDao {
 
             //将element封装到user对象中
             User user = new User();
-            String name = element.attributeValue("username");
-            String passWord = element.attributeValue("password");
-            user.setUsername(name);
-            user.setPassword(passWord);
-            return user;
+            String name = element.attributeValue("username");//获取username元素
+            String passWord = element.attributeValue("password");//获取password元素
+            user.setUsername(name);//设置username
+            user.setPassword(passWord);//设置password
+            return user;//返回user对象
         } catch (DocumentException e) {
             throw new RuntimeException(e);
         }
@@ -81,6 +81,8 @@ public class UserDao {
             // 为userEle设置属性
             userEle.addAttribute("username", user.getUsername());
             userEle.addAttribute("password", user.getPassword());
+            userEle.addAttribute("sex", user.getSex());
+            userEle.addAttribute("love", user.getLove());
 
             //进行回写操作
             OutputFormat format = OutputFormat.createPrettyPrint();
