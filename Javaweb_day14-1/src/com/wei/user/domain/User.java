@@ -1,7 +1,5 @@
 package com.wei.user.domain;
 
-import java.util.Objects;
-
 /**
  * 实体类
  */
@@ -9,9 +7,11 @@ import java.util.Objects;
 public class User {
     private String username;
     private String password;
+    private int age;
     private String verifyCode;
     private String sex;
     private String love;
+
 
     public User() {
         super();
@@ -22,18 +22,11 @@ public class User {
         return "User{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", age=" + age +
                 ", verifyCode='" + verifyCode + '\'' +
                 ", sex='" + sex + '\'' +
                 ", love='" + love + '\'' +
                 '}';
-    }
-
-    public User(String username, String password, String verifyCode, String sex, String love) {
-        this.username = username;
-        this.password = password;
-        this.verifyCode = verifyCode;
-        this.sex = sex;
-        this.love = love;
     }
 
     public String getUsername() {
@@ -50,6 +43,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getVerifyCode() {

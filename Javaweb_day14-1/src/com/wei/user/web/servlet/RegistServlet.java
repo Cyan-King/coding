@@ -34,6 +34,7 @@ public class RegistServlet extends HttpServlet {
         Map<String, String> errors = new HashMap<String, String>();
         String username = form.getUsername();
         String password = form.getPassword();
+        int age = form.getAge();
         String verifyCode = form.getVerifyCode();
         System.out.println(verifyCode);
 
@@ -51,6 +52,11 @@ public class RegistServlet extends HttpServlet {
         }
         else if (password.length() < 3 || password.length() > 15){
             errors.put("password", "密码长度应该是3~15之间");
+        }
+
+        //年龄校验
+        if (age < 0 || age > 120){
+            errors.put("age", "年龄不能大于120岁，和小于0");
         }
 
         //校验图片
@@ -71,6 +77,8 @@ public class RegistServlet extends HttpServlet {
             request.getRequestDispatcher("/user/regist.jsp").forward(request, response);
             return;
         }
+
+        System.out.println("年龄：：：" + form.getAge());
 
         /**
          * 添加新功能

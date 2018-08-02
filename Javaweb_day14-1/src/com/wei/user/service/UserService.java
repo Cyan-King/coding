@@ -1,13 +1,15 @@
 package com.wei.user.service;
 
+import com.wei.user.dao.DaoFactory;
 import com.wei.user.dao.UserDao;
+import com.wei.user.dao.UserDaoImpl;
 import com.wei.user.domain.User;
 
 /**
  * 业务逻辑类---这个依赖于UserDao
  */
 public class UserService {
-    private UserDao userDao = new UserDao();
+    private UserDao userDao = DaoFactory.getUserDao();
 
     /**
      * 注册功能
