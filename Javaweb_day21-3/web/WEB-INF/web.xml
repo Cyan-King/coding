@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+    <filter>
+        <filter-name>/AFilter</filter-name>
+        <filter-class>com.wei.web.filter.AFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>/AFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <listener>
+        <listener-class>com.wei.web.listener.AListener</listener-class>
+    </listener>
+
+
+
+
+</web-app>

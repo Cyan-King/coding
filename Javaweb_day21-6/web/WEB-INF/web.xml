@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+    
+    <servlet>
+        <servlet-name>/BookServlet</servlet-name>
+        <servlet-class>com.wei.book.web.servlet.BookServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>/BookServlet</servlet-name>
+        <url-pattern>/BookServlet</url-pattern>
+    </servlet-mapping>
+
+   <filter>
+        <filter-name>/BookFilter</filter-name>
+        <filter-class>com.wei.book.web.filter.BookFilter</filter-class>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>/BookFilter</filter-name>
+        <url-pattern>/BookServlet</url-pattern>
+    </filter-mapping>
+
+</web-app>
