@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+    <bean id="stu1" className="com.wei.domain.Student">
+        <property name="number" value="Stu_001" />
+        <property name="name" value="张三" />
+        <property name="age" value="12" />
+        <property name="sex" value="男" />
+        <property name="teacher" ref="tea"/>
+        <!--要进行关联的话我们需要使用 ref来进行关联-->
+    </bean>
+
+    <bean id="stu2" className="com.wei.domain.Student">
+        <property name="number" value="Stu_002" />
+        <property name="name" value="李四" />
+        <property name="age" value="12" />
+        <property name="sex" value="男" />
+        <property name="teacher" ref="tea"/>
+    </bean>
+
+    <bean id="tea" className="com.wei.domain.Teacher">
+        <property name="number" value="Tea_001" />
+        <property name="name" value="赵六" />
+        <property name="salary" value="123.34" />
+    </bean>
+
+    <bean id="stuDao1" className="com.wei.dao.impl.StudentDaoImpl"/>
+    <bean id="stuDao2" className="com.wei.dao.impl.StudentDaoImpl2"/>
+
+    <bean id="stuService" className="com.wei.service.Impl.StudentServiceImpl" >
+        <property name="StudentDao1" ref="stuDao1" />
+    </bean>
+</beans>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>青苹果</title>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="ee.css" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#subbtn").bind("click",function(event){
+  	var name=$("#name").val();
+	  if(name==""){
+	  	alert("用户名不能为空！");
+		  $("#name").focus();
+		  event.preventDefault();
+	  }
+  })
+	$("#subbtn").bind("click",function(event){
+  	var namee=$("#namee").val();
+	  if(namee==""){
+	  	alert("密码不能为空！");
+		  $("#namee").focus();
+		  event.preventDefault();
+	  }
+  })
+  $(function () {
+        //给按钮注册点击事件
+        $("#subbtn").click(function () {
+            var $name=$("#name").val();
+            var $namee=$("#namee").val();     })   
+    })
+
+
+});
+</script>
+
+</head>
+
+<body>
+<div id="head">
+	<div class="headqq">
+    
+	<div id="header">  </div>
+    
+    <div id="headee">
+				<ul>
+				    <li class="no1"><a href="#">Home</a></li>
+				    <li><a href="#">Services</a></li>
+				    <li><a href="#">Solutions</a></li>
+				    <li><a href="#">Contacts</a></li>
+                    <div style="clear:both"></div>
+				</ul>
+			</div>
+    </div>  
+</div>
+
+<div id="bodyqq">
+	<div class="headqq">
+    
+	<div id="bodyer"> 
+    <h2>Effective strategy working out!</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero lectus, hendrerit a commodo sed, porta nec ante. Quisque vulputate, ipsum non rutrum eleifend, urna erat ullamcorper purus, feugiat </p>
+				<p>laoreet eros tortor tincidunt justo. Nulla tincidunt enim nulla. Nulla tempor pretium arcu in ullamcorper. Donec volutpat rhoncus tempus. Morbi tristique lectus quis magna tempor non tristique est malesuada. Ut eu ligula est.</p>
+				<p>Fusce eleifend enim id dolor porta adipiscing. Curabitur vel leo libero, vel sagittis lorem. </p>
+     </div>
+    
+    <div id="bodyee">
+			<img src="images/heading-img.jpg"  class="bodurr"/>	
+	</div>
+    
+    </div>  
+</div>
+
+<div id="centear">
+	<div class="headqq">
+    <div id="beijing">
+	<div id="centearer"> <h2>Business Planing</h2>
+					<a href="#" class="left"><img src="images/pic-2.jpg" alt="" /></a>
+					<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero lectus, hendrerit a commodo sed, porta nec ante.</span>
+							
+					</p>
+           </div>
+     <div id="centearert"> <h2>Business Planing</h2>
+					<a href="#" class="left"><img src="images/pic-2.jpg" alt="" /></a>
+					<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero lectus, hendrerit a commodo sed, porta nec ante.</span>
+							
+					</p>
+           </div>
+           
+      <div id="centearerty"> <h2>Business Planing</h2>
+					<a href="#" class="left"><img src="images/pic-2.jpg" alt="" /></a>
+					<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero lectus, hendrerit a commodo sed, porta nec ante.</span>
+							
+					</p>
+           </div>
+    
+    
+    </div>
+    </div>  
+</div>
+<div id="foot">
+<div id="footq">
+<div class="headqq"><br />
+<div id="fotter">
+<form>
+<h2>UserName:&nbsp;<input type="text" class="t" id="name" /></h2>
+<h2>PassWord:&nbsp;<input type="password" class="t" id="namee"/></h2><br />
+	<input type="submit" value="登录" name="tele" id="subbtn"/>　　
+    <input type="reset" value="重置" id="input" />
+	
+    
+
+ </form>
+ </div>
+ 
+ </div>
+
+</div>
+</div>
+</body>
+</html>

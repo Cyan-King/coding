@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+    
+    <servlet>
+        <servlet-name>/UserServlet</servlet-name>
+        <servlet-class>com.wei.user.web.serlvet.UserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/CategoryServlet</servlet-name>
+        <servlet-class>com.wei.category.web.servlet.CategoryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/BookServlet</servlet-name>
+        <servlet-class>com.wei.book.web.servlet.BookServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/CartServlet</servlet-name>
+        <servlet-class>com.wei.cart.web.servlet.CartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/OrderServlet</servlet-name>
+        <servlet-class>com.wei.order.web.servlet.OrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/AdminCategoryServlet</servlet-name>
+        <servlet-class>com.wei.category.web.servlet.admin.AdminCategoryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/AdminBookServlet</servlet-name>
+        <servlet-class>com.wei.book.web.servlet.admin.AdminBookServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/AdminAddServlet</servlet-name>
+        <servlet-class>com.wei.book.web.servlet.admin.AdminAddServlet</servlet-class>
+    </servlet>
+
+
+
+
+    
+    <servlet-mapping>
+        <servlet-name>/UserServlet</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/CategoryServlet</servlet-name>
+        <url-pattern>/CategoryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/BookServlet</servlet-name>
+        <url-pattern>/BookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/CartServlet</servlet-name>
+        <url-pattern>/CartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/OrderServlet</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/AdminCategoryServlet</servlet-name>
+        <url-pattern>/AdminCategoryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/AdminBookServlet</servlet-name>
+        <url-pattern>/AdminBookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/AdminAddServlet</servlet-name>
+        <url-pattern>/AdminAddServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>/SendServlet</servlet-name>
+        <servlet-class>test.SendServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/GetServlet</servlet-name>
+        <servlet-class>test.GetServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>/GetServlet</servlet-name>
+        <url-pattern>/GetServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/SendServlet</servlet-name>
+        <url-pattern>/SendServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <display-name>LoginFilter</display-name>
+        <filter-name>/LoginFilter</filter-name>
+        <filter-class>com.wei.user.web.filter.LoginFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>/LoginFilter</filter-name>
+        <url-pattern>/jsps/cart/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>/LoginFilter</filter-name>
+        <url-pattern>/jsps/order/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>/LoginFilter</filter-name>
+        <servlet-name>/CartServlet</servlet-name>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>/LoginFilter</filter-name>
+        <servlet-name>/OrderServlet</servlet-name>
+    </filter-mapping>
+    
+</web-app>
